@@ -1,90 +1,250 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { Wrench, Siren, Laptop, Droplet, Truck, Flame } from "lucide-react";
-import heroTruck from "@/assets/hero-truck.jpg";
-import engineImg from "@/assets/engine-repair.jpg";
-import emergencyImg from "@/assets/emergency-help.jpg";
-import diagnosticsImg from "@/assets/diagnostics.jpg";
-import oilBrakesImg from "@/assets/oil-brakes.jpg";
-import fleetImg from "@/assets/fleet.jpg";
-import weldingImg from "@/assets/welding.jpg";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { ArrowRight, Check, Star, Truck, MapPin, Award } from "lucide-react";
+import { SiteLayout } from "../components/SiteLayout";
+import { Reveal } from "../components/Reveal";
+import { services } from "../lib/services";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Georgia Truck Works — Heavy Duty Truck Repair" },
-      { name: "description", content: "Engine repairs, emergency help, computer diagnostics, oil & brakes, fleet maintenance, and welding for heavy-duty trucks." },
-      { property: "og:title", content: "Georgia Truck Works" },
-      { property: "og:description", content: "Full-service heavy-duty truck repair shop." },
-      { property: "og:image", content: heroTruck },
+      { title: "Georgia Truck Care — Truck & Trailer Repair in Atlanta, GA" },
+      { name: "description", content: "Expert truck & trailer repair for fleets and independents across Georgia. Engine, brakes, electrical, trailers, PM, and roadside assistance." },
+      { property: "og:title", content: "Georgia Truck Care — Atlanta's Trusted Truck Shop" },
+      { property: "og:description", content: "Expert truck & trailer repair. Fast turnaround. Zero shortcuts." },
+      { property: "og:url", content: "/" },
     ],
+    links: [{ rel: "canonical", href: "/" }],
   }),
   component: Index,
 });
 
-const services = [
-  { icon: Wrench, title: "Engine Repairs", desc: "Diesel engine overhauls, rebuilds, and performance fixes.", img: engineImg },
-  { icon: Siren, title: "Emergency Help", desc: "24/7 roadside assistance — we get you rolling again.", img: emergencyImg },
-  { icon: Laptop, title: "Computer Diagnostics", desc: "Advanced scanning to pinpoint problems fast.", img: diagnosticsImg },
-  { icon: Droplet, title: "Oil Change & Brakes", desc: "Preventive maintenance and full brake service.", img: oilBrakesImg },
-  { icon: Truck, title: "Fleet Maintenance", desc: "Keep your whole fleet on the road with scheduled service.", img: fleetImg },
-  { icon: Flame, title: "Welding of All Materials", desc: "Steel, aluminum, stainless — chassis and structural welding.", img: weldingImg },
-];
-
 function Index() {
   return (
-    <div className="min-h-screen bg-neutral-950 text-neutral-100">
-      {/* Header */}
-      <header className="border-b border-neutral-800 bg-neutral-950/80 backdrop-blur sticky top-0 z-10">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <Truck className="text-orange-500" size={28} />
-            <span className="font-bold tracking-wide">GEORGIA TRUCK WORKS</span>
-          </div>
-          <a href="#services" className="text-sm text-neutral-300 hover:text-orange-500">Services</a>
-        </div>
-      </header>
-
-      {/* Hero */}
-      <section className="relative h-[80vh] min-h-[520px] overflow-hidden">
-        <img src={heroTruck} alt="Heavy-duty truck in the shop" width={1600} height={900} className="absolute inset-0 w-full h-full object-cover opacity-60" />
-        <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/40 to-transparent" />
-        <div className="relative max-w-7xl mx-auto px-6 h-full flex flex-col justify-center">
-          <span className="text-orange-500 font-semibold tracking-widest text-sm">HEAVY DUTY · DONE RIGHT</span>
-          <h1 className="text-5xl md:text-7xl font-black mt-3 max-w-3xl leading-tight">Truck repair built to keep you moving.</h1>
-          <p className="mt-5 max-w-xl text-neutral-300 text-lg">From engine rebuilds to roadside emergencies — Georgia's trusted heavy-duty truck shop.</p>
-          <div className="mt-8">
-            <a href="#services" className="inline-block bg-orange-500 hover:bg-orange-600 text-black font-bold px-7 py-3 rounded-md">Our Services</a>
-          </div>
+    <SiteLayout>
+      {/* HERO */}
+      <section className="relative min-h-[92vh] flex items-center overflow-hidden hero-grid-bg">
+        <div className="absolute -top-32 -right-32 h-[500px] w-[500px] rounded-full bg-[var(--gold)]/10 blur-[120px]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#0A0A0A]" />
+        <div className="relative mx-auto max-w-7xl px-5 lg:px-8 py-24 w-full">
+          <Reveal>
+            <span className="section-label mb-6">Atlanta · Georgia</span>
+          </Reveal>
+          <Reveal delay={80}>
+            <h1 className="font-display font-bold uppercase tracking-tight text-5xl sm:text-6xl lg:text-8xl leading-[0.95] max-w-5xl">
+              We Fix It. <br />
+              <span className="text-[var(--gold)]">We Get You</span> <br />
+              Back on the Road.
+            </h1>
+          </Reveal>
+          <Reveal delay={160}>
+            <p className="mt-8 max-w-xl text-lg text-[#A0A0A0]">
+              Expert truck &amp; trailer repair for fleets and independents across Georgia. Modern shop. Real technicians. Zero shortcuts.
+            </p>
+          </Reveal>
+          <Reveal delay={240}>
+            <div className="mt-10 flex flex-wrap gap-3">
+              <Link to="/contact" className="inline-flex items-center gap-2 rounded-md bg-[var(--gold)] px-7 py-4 text-sm font-bold uppercase tracking-[0.08em] text-[#0A0A0A] transition-colors hover:bg-[var(--gold-hover)]">
+                Book a Service <ArrowRight className="h-4 w-4" />
+              </Link>
+              <Link to="/services" className="inline-flex items-center gap-2 rounded-md border border-white/30 px-7 py-4 text-sm font-bold uppercase tracking-[0.08em] text-white transition-colors hover:bg-white/5 hover:border-white">
+                See Our Services
+              </Link>
+            </div>
+          </Reveal>
+          <Reveal delay={320}>
+            <div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-px bg-[var(--border)] border border-[var(--border)] max-w-3xl">
+              {[
+                { Icon: Truck, value: "500+", label: "Trucks Serviced" },
+                { Icon: Star, value: "5.0", label: "Google Rating" },
+                { Icon: MapPin, value: "Atlanta, GA", label: "Based & Operated" },
+              ].map(({ Icon, value, label }) => (
+                <div key={label} className="bg-[#0A0A0A] p-5 flex items-center gap-4">
+                  <Icon className="h-6 w-6 text-[var(--gold)] shrink-0" />
+                  <div>
+                    <div className="font-display font-bold text-lg text-white">{value}</div>
+                    <div className="text-xs uppercase tracking-wider text-[#A0A0A0]">{label}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </Reveal>
         </div>
       </section>
 
-      {/* Services */}
-      <section id="services" className="max-w-7xl mx-auto px-6 py-20">
-        <div className="mb-12">
-          <span className="text-orange-500 font-semibold tracking-widest text-sm">WHAT WE DO</span>
-          <h2 className="text-4xl md:text-5xl font-black mt-2">Services</h2>
-        </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((s) => (
-            <article key={s.title} className="group bg-neutral-900 border border-neutral-800 rounded-lg overflow-hidden hover:border-orange-500 transition">
-              <div className="relative h-52 overflow-hidden">
-                <img src={s.img} alt={s.title} loading="lazy" width={800} height={600} className="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
-                <div className="absolute top-3 left-3 bg-orange-500 text-black p-2 rounded-md">
-                  <s.icon size={22} />
+      {/* ABOUT */}
+      <section className="bg-[#141414] border-y border-[var(--border)]">
+        <div className="mx-auto max-w-7xl px-5 lg:px-8 py-24 lg:py-32 grid lg:grid-cols-2 gap-16 items-center">
+          <Reveal>
+            <span className="section-label mb-6">Who We Are</span>
+            <h2 className="font-display font-bold uppercase text-3xl sm:text-4xl lg:text-5xl leading-tight">
+              Built for Heavy-Duty. <br />
+              <span className="text-[var(--gold)]">Run Like a Pro Shop.</span>
+            </h2>
+            <p className="mt-6 text-[#A0A0A0] text-lg max-w-lg">
+              Georgia Truck Care is Atlanta's go-to shop for serious truck and trailer work. Whether you run one rig or a hundred, we treat every job like our reputation depends on it — because it does.
+            </p>
+            <ul className="mt-8 space-y-3">
+              {[
+                "Expert ASE-trained technicians",
+                "Fast turnaround, honest timelines",
+                "Fleet and independent service",
+                "Zero shortcuts, always",
+              ].map((t) => (
+                <li key={t} className="flex items-center gap-3 text-white">
+                  <span className="inline-flex h-6 w-6 items-center justify-center rounded-sm bg-[var(--gold)]/15 text-[var(--gold)]">
+                    <Check className="h-4 w-4" />
+                  </span>
+                  {t}
+                </li>
+              ))}
+            </ul>
+            <Link to="/about" className="mt-10 inline-flex items-center gap-2 text-sm font-bold uppercase tracking-[0.1em] text-[var(--gold)] hover:gap-3 transition-all">
+              Learn More <ArrowRight className="h-4 w-4" />
+            </Link>
+          </Reveal>
+          <Reveal delay={120}>
+            <div className="relative aspect-[4/5] bg-[#1E1E1E] border border-[var(--border)] overflow-hidden">
+              <div className="absolute inset-0 flex items-center justify-center opacity-10">
+                <span className="font-display font-black text-[12rem] text-[var(--gold)]">GT</span>
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-tr from-[#0A0A0A] via-transparent to-transparent" />
+              <div className="absolute bottom-8 left-8 right-8">
+                <div className="text-xs uppercase tracking-[0.18em] text-[var(--gold)] mb-2">Est. Atlanta, GA</div>
+                <div className="font-display font-bold text-2xl text-white">
+                  "Arrived on a tow truck. <br /> Left running with confidence."
                 </div>
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold">{s.title}</h3>
-                <p className="mt-2 text-neutral-400 text-sm">{s.desc}</p>
-              </div>
-            </article>
-          ))}
+            </div>
+          </Reveal>
         </div>
       </section>
 
-      <footer className="border-t border-neutral-800 py-8 text-center text-neutral-500 text-sm">
-        © {new Date().getFullYear()} Georgia Truck Works
-      </footer>
+      {/* SERVICES */}
+      <section className="bg-[#0A0A0A]">
+        <div className="mx-auto max-w-7xl px-5 lg:px-8 py-24 lg:py-32">
+          <Reveal>
+            <span className="section-label mb-6">What We Do</span>
+            <h2 className="font-display font-bold uppercase text-3xl sm:text-4xl lg:text-5xl max-w-3xl">
+              Expert Craftsmanship, <span className="text-[var(--gold)]">Reliable Solutions.</span>
+            </h2>
+          </Reveal>
+          <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-[var(--border)] border border-[var(--border)]">
+            {services.map((s, i) => (
+              <Reveal key={s.slug} delay={i * 60}>
+                <Link
+                  to="/services/$slug"
+                  params={{ slug: s.slug }}
+                  className="group block bg-[#141414] hover:bg-[#1E1E1E] p-8 h-full transition-colors relative"
+                >
+                  <s.icon className="h-9 w-9 text-[var(--gold)]" strokeWidth={1.5} />
+                  <h3 className="mt-6 font-display font-bold text-xl text-white">{s.name}</h3>
+                  <p className="mt-3 text-sm text-[#A0A0A0] leading-relaxed">{s.short}</p>
+                  <span className="mt-6 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.1em] text-[var(--gold)] group-hover:gap-3 transition-all">
+                    Learn More <ArrowRight className="h-3.5 w-3.5" />
+                  </span>
+                </Link>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* WHY CHOOSE US */}
+      <section className="bg-[#141414] border-y border-[var(--border)]">
+        <div className="mx-auto max-w-7xl px-5 lg:px-8 py-20">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-[var(--border)] border border-[var(--border)]">
+            {[
+              { value: "15+", label: "Years Combined Experience" },
+              { value: "500+", label: "Trucks Serviced" },
+              { value: "5.0★", label: "Google Rating" },
+              { value: "3", label: "States Served" },
+            ].map((m) => (
+              <div key={m.label} className="bg-[#141414] p-8 lg:p-10 text-center">
+                <div className="font-display font-bold text-4xl lg:text-5xl text-[var(--gold)]">{m.value}</div>
+                <div className="mt-3 text-xs uppercase tracking-[0.14em] text-[#A0A0A0]">{m.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* TESTIMONIALS */}
+      <section className="bg-[#0A0A0A]">
+        <div className="mx-auto max-w-7xl px-5 lg:px-8 py-24 lg:py-32">
+          <Reveal>
+            <span className="section-label mb-6">Client Reviews</span>
+            <h2 className="font-display font-bold uppercase text-3xl sm:text-4xl lg:text-5xl max-w-3xl">
+              Trusted by Drivers <span className="text-[var(--gold)]">Across Georgia.</span>
+            </h2>
+          </Reveal>
+          <div className="mt-16 grid md:grid-cols-3 gap-6">
+            {testimonials.map((t, i) => (
+              <Reveal key={t.name} delay={i * 80}>
+                <TestimonialCard {...t} />
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CONTACT CTA */}
+      <section className="bg-[#141414] border-t border-[var(--border)]">
+        <div className="mx-auto max-w-7xl px-5 lg:px-8 py-20">
+          <div className="border-l-4 border-[var(--gold)] pl-8 lg:pl-12 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
+            <div>
+              <span className="section-label mb-4">Ready When You Are</span>
+              <h2 className="font-display font-bold uppercase text-3xl lg:text-4xl text-white max-w-2xl">
+                Arrived on a tow truck. <br />
+                <span className="text-[var(--gold)]">Leaves running with confidence.</span>
+              </h2>
+            </div>
+            <Link to="/contact" className="inline-flex items-center gap-2 rounded-md bg-[var(--gold)] px-8 py-4 text-sm font-bold uppercase tracking-[0.08em] text-[#0A0A0A] hover:bg-[var(--gold-hover)] transition-colors self-start lg:self-auto">
+              Contact Us <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+    </SiteLayout>
+  );
+}
+
+const testimonials = [
+  {
+    name: "Marcus T.",
+    city: "Atlanta, GA",
+    text: "Best truck shop in the metro. Diagnosed my engine issue in an hour and had me rolling the next morning. Honest pricing, real expertise.",
+  },
+  {
+    name: "Dwayne R.",
+    city: "Marietta, GA",
+    text: "Run a small fleet of 12 trucks. These guys handle all our PMs and any breakdowns. Communication is fast, work is solid, prices are fair.",
+  },
+  {
+    name: "Sasha L.",
+    city: "Decatur, GA",
+    text: "Got stranded on I-285 with brake issues. They sent mobile help within 40 minutes. Saved my whole load. Forever customer.",
+  },
+];
+
+function TestimonialCard({ name, city, text }: { name: string; city: string; text: string }) {
+  const initials = name.split(" ").map((n) => n[0]).join("");
+  return (
+    <div className="bg-[#141414] border border-[var(--border)] p-7 h-full transition-colors hover:border-[var(--gold)]/40">
+      <div className="flex items-center gap-4">
+        <div className="h-12 w-12 rounded-full bg-[var(--gold)] text-[#0A0A0A] font-bold flex items-center justify-center text-sm">
+          {initials}
+        </div>
+        <div>
+          <div className="font-bold text-white">{name}</div>
+          <div className="text-xs text-[#A0A0A0]">{city}</div>
+        </div>
+      </div>
+      <div className="mt-5 flex gap-0.5">
+        {Array.from({ length: 5 }).map((_, i) => (
+          <Star key={i} className="h-4 w-4 fill-[var(--gold)] text-[var(--gold)]" />
+        ))}
+      </div>
+      <p className="mt-4 text-sm text-[#A0A0A0] leading-relaxed">"{text}"</p>
     </div>
   );
 }
