@@ -46,8 +46,13 @@ function ServiceDetail() {
       <section className="bg-[#0A0A0A]">
         <div className="mx-auto max-w-5xl px-5 lg:px-8 py-20 grid lg:grid-cols-[1fr_320px] gap-12">
           <Reveal>
-            <Icon className="h-12 w-12 text-[var(--gold)]" strokeWidth={1.5} />
-            <h2 className="mt-8 font-display font-bold uppercase text-2xl lg:text-3xl">About this service</h2>
+            <div className="relative aspect-[16/9] overflow-hidden mb-8">
+              <img src={service.image} alt={service.name} width={1280} height={720} className="absolute inset-0 h-full w-full object-cover" />
+              <div className="absolute top-4 left-4 inline-flex h-12 w-12 items-center justify-center rounded-sm bg-[var(--gold)] text-[#0A0A0A]">
+                <Icon className="h-6 w-6" strokeWidth={2} />
+              </div>
+            </div>
+            <h2 className="mt-2 font-display font-bold uppercase text-2xl lg:text-3xl">About this service</h2>
             <p className="mt-5 text-[#A0A0A0] text-lg leading-relaxed">{service.description}</p>
 
             <h3 className="mt-12 font-display font-bold uppercase text-xl">What's Included</h3>
