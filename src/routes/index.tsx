@@ -134,14 +134,21 @@ function Index() {
                 <Link
                   to="/services/$slug"
                   params={{ slug: s.slug }}
-                  className="group block bg-[#141414] hover:bg-[#1E1E1E] p-8 h-full transition-colors relative"
+                  className="group block bg-[#141414] hover:bg-[#1E1E1E] h-full transition-colors relative"
                 >
-                  <s.icon className="h-9 w-9 text-[var(--gold)]" strokeWidth={1.5} />
-                  <h3 className="mt-6 font-display font-bold text-xl text-white">{s.name}</h3>
-                  <p className="mt-3 text-sm text-[#A0A0A0] leading-relaxed">{s.short}</p>
-                  <span className="mt-6 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.1em] text-[var(--gold)] group-hover:gap-3 transition-all">
-                    Learn More <ArrowRight className="h-3.5 w-3.5" />
-                  </span>
+                  <div className="relative aspect-[4/3] overflow-hidden">
+                    <img src={s.image} alt={s.name} loading="lazy" width={800} height={600} className="absolute inset-0 h-full w-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition duration-500" />
+                    <div className="absolute top-3 left-3 inline-flex h-10 w-10 items-center justify-center rounded-sm bg-[var(--gold)] text-[#0A0A0A]">
+                      <s.icon className="h-5 w-5" strokeWidth={2} />
+                    </div>
+                  </div>
+                  <div className="p-8">
+                    <h3 className="font-display font-bold text-xl text-white">{s.name}</h3>
+                    <p className="mt-3 text-sm text-[#A0A0A0] leading-relaxed">{s.short}</p>
+                    <span className="mt-6 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.1em] text-[var(--gold)] group-hover:gap-3 transition-all">
+                      Learn More <ArrowRight className="h-3.5 w-3.5" />
+                    </span>
+                  </div>
                 </Link>
               </Reveal>
             ))}
