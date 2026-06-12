@@ -6,7 +6,7 @@ export function Logo({ className = "" }: { className?: string }) {
       <img
         src="/logosf.jpeg"
         alt="Georgia Truck Care"
-        className="h-14 w-auto object-contain block"
+        className="h-9 w-9 object-contain block"
         loading="eager"
       />
     </Link>
