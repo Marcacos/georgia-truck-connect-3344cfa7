@@ -103,17 +103,13 @@ function Index() {
             </Link>
           </Reveal>
           <Reveal delay={120}>
-            <div className="relative aspect-[4/5] bg-[#1E1E1E] border border-[var(--border)] overflow-hidden">
-              <div className="absolute inset-0 flex items-center justify-center opacity-10">
-                <span className="font-display font-black text-[12rem] text-[var(--gold)]">GT</span>
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-tr from-[#0A0A0A] via-transparent to-transparent" />
-              <div className="absolute bottom-8 left-8 right-8">
-                <div className="text-xs uppercase tracking-[0.18em] text-[var(--gold)] mb-2">Est. Atlanta, GA</div>
-                <div className="font-display font-bold text-2xl text-white">
-                  "Arrived on a tow truck. <br /> Left running with confidence."
-                </div>
-              </div>
+            <div className="relative aspect-[4/5] bg-[#0A0A0A] border border-[var(--border)] overflow-hidden flex items-center justify-center p-8">
+              <img
+                src="/logosf.jpeg"
+                alt="Georgia Truck Care logo"
+                className="max-h-full max-w-full object-contain"
+                loading="lazy"
+              />
             </div>
           </Reveal>
         </div>
