@@ -81,6 +81,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:site_name", content: "Georgia Truck Care" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:title", content: "Georgia Truck Care — Truck & Trailer Repair in Atlanta, GA" },
+      { name: "twitter:title", content: "Georgia Truck Care — Truck & Trailer Repair in Atlanta, GA" },
+      { property: "og:description", content: "Expert truck & trailer maintenance and repair in Atlanta, GA. Fast turnaround for fleets and independents. We fix it. We get you back on the road." },
+      { name: "twitter:description", content: "Expert truck & trailer maintenance and repair in Atlanta, GA. Fast turnaround for fleets and independents. We fix it. We get you back on the road." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/e569b9cc-fd28-4036-a968-865ba1e8f2f4/id-preview-f3cf8998--474b0e2a-7df2-4f18-acfa-80fc6cb121bf.lovable.app-1781231611208.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/e569b9cc-fd28-4036-a968-865ba1e8f2f4/id-preview-f3cf8998--474b0e2a-7df2-4f18-acfa-80fc6cb121bf.lovable.app-1781231611208.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
