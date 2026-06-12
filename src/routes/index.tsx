@@ -103,13 +103,19 @@ function Index() {
             </Link>
           </Reveal>
           <Reveal delay={120}>
-            <div className="relative aspect-square bg-[#0A0A0A] border border-[var(--border)] overflow-hidden flex items-center justify-center">
+            <div className="relative aspect-square bg-[#0A0A0A] border border-[var(--border)] overflow-hidden">
               <img
-                src="/logosf.jpeg"
-                alt="Georgia Truck Care logo"
-                className="w-full h-full object-contain"
+                src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1200&q=80"
+                alt="Semi truck in repair shop"
+                className="w-full h-full object-cover"
                 loading="lazy"
               />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#0A0A0A] to-transparent p-6">
+                <div className="flex items-center gap-3 text-[var(--gold)]">
+                  <Award className="h-5 w-5" />
+                  <span className="text-xs uppercase tracking-[0.18em] font-bold">ASE Certified</span>
+                </div>
+              </div>
             </div>
           </Reveal>
         </div>
