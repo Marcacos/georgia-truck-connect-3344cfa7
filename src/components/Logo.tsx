@@ -7,8 +7,9 @@ export function Logo({ className = "" }: { className?: string }) {
         <img
           src="/logosf.jpeg"
           alt="Georgia Truck Care"
-          className="h-full w-full object-contain"
+          className="h-full w-full object-contain block"
           loading="eager"
+          style={{ background: "transparent" }}
         />
       </span>
       <span className="flex flex-col leading-none">
