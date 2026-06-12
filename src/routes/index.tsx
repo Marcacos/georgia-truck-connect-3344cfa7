@@ -103,7 +103,7 @@ function Index() {
             </Link>
           </Reveal>
           <Reveal delay={120}>
-            <div className="relative aspect-[4/5] bg-[#0A0A0A] border border-[var(--border)] overflow-hidden flex items-center justify-center p-8">
+            <div className="relative aspect-[4/5] bg-[#0A0A0A] border border-[var(--border)] overflow-hidden flex items-center justify-center p-2">
               <img
                 src="/logosf.jpeg"
                 alt="Georgia Truck Care logo"
