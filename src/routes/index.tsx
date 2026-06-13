@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Check, Star, Truck, MapPin, Award } from "lucide-react";
+import { ArrowRight, Check, Star, Truck, MapPin } from "lucide-react";
 import { SiteLayout } from "../components/SiteLayout";
 import { Reveal } from "../components/Reveal";
 import { services } from "../lib/services";
@@ -110,12 +110,6 @@ function Index() {
                 className="w-full h-full object-cover"
                 loading="lazy"
               />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#0A0A0A] to-transparent p-6">
-                <div className="flex items-center gap-3 text-[var(--gold)]">
-                  <Award className="h-5 w-5" />
-                  <span className="text-xs uppercase tracking-[0.18em] font-bold">ASE Certified</span>
-                </div>
-              </div>
             </div>
           </Reveal>
         </div>
