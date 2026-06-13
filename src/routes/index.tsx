@@ -85,7 +85,7 @@ function Index() {
             </p>
             <ul className="mt-8 space-y-3">
               {[
-                "Expert ASE-trained technicians",
+                "Expert certified technicians",
                 "Fast turnaround, honest timelines",
                 "Fleet and independent service",
                 "Zero shortcuts, always",
