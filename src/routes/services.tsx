@@ -8,9 +8,9 @@ export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
       { title: "Services — Georgia Truck Care" },
-      { name: "description", content: "Full-service truck and trailer repair: engine diagnostics, brakes, electrical, trailer maintenance, preventive maintenance, and roadside assistance." },
+      { name: "description", content: "Full-service truck and diesel pickup repair: engine diagnostics, brakes, electrical, preventive maintenance, and roadside assistance." },
       { property: "og:title", content: "Services — Georgia Truck Care" },
-      { property: "og:description", content: "Engine, brakes, electrical, trailers, PM, and roadside assistance." },
+      { property: "og:description", content: "Engine, brakes, electrical, diagnostics, PM, and roadside assistance for trucks and diesel pickups." },
       { property: "og:url", content: "/services" },
     ],
     links: [{ rel: "canonical", href: "/services" }],
@@ -23,7 +23,7 @@ function ServicesPage() {
     <SiteLayout>
       <PageHero
         label="What We Do"
-        title="Full-Service Truck & Trailer Care."
+        title="Full-Service Truck & Diesel Pickup Care."
         subtitle="Diagnostics, repairs, maintenance, and roadside support — handled in-house by certified technicians."
       />
       <section className="bg-[#0A0A0A]">

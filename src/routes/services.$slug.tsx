@@ -13,7 +13,7 @@ export const Route = createFileRoute("/services/$slug")({
   head: ({ loaderData }) => {
     const s = loaderData?.service;
     const title = s ? `${s.name} — Georgia Truck Care` : "Service — Georgia Truck Care";
-    const desc = s?.short ?? "Professional truck and trailer service in Atlanta, GA.";
+    const desc = s?.short ?? "Professional truck and diesel pickup service in Atlanta, GA.";
     return {
       meta: [
         { title },

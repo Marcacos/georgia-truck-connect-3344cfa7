@@ -7,10 +7,10 @@ import { services } from "../lib/services";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Georgia Truck Care — Truck & Trailer Repair in Atlanta, GA" },
-      { name: "description", content: "Expert truck & trailer repair for fleets and independents across Georgia. Engine, brakes, electrical, trailers, PM, and roadside assistance." },
-      { property: "og:title", content: "Georgia Truck Care — Atlanta's Trusted Truck Shop" },
-      { property: "og:description", content: "Expert truck & trailer repair. Fast turnaround. Zero shortcuts." },
+      { title: "Georgia Truck Care — Truck & Diesel Pickup Repair in Atlanta, GA" },
+      { name: "description", content: "Expert truck & diesel pickup repair for fleets and independents across Georgia. Engine, brakes, electrical, diagnostics, PM, and roadside assistance." },
+      { property: "og:title", content: "Georgia Truck Care — Atlanta's Trusted Truck & Diesel Pickup Shop" },
+      { property: "og:description", content: "Expert truck & diesel pickup repair. Fast turnaround. Zero shortcuts." },
       { property: "og:url", content: "/" },
     ],
     links: [{ rel: "canonical", href: "/" }],
@@ -38,7 +38,7 @@ function Index() {
           </Reveal>
           <Reveal delay={160}>
             <p className="mt-8 max-w-xl text-lg text-[#A0A0A0]">
-              Expert truck &amp; trailer repair for fleets and independents across Georgia. Modern shop. Real technicians. Zero shortcuts.
+              Expert truck &amp; diesel pickup repair for fleets and independents across Georgia. Modern shop. Real technicians. Zero shortcuts.
             </p>
           </Reveal>
           <Reveal delay={240}>
@@ -81,7 +81,7 @@ function Index() {
               <span className="text-[var(--gold)]">Run Like a Pro Shop.</span>
             </h2>
             <p className="mt-6 text-[#A0A0A0] text-lg max-w-lg">
-              Georgia Truck Care is Atlanta's go-to shop for serious truck and trailer work. Whether you run one rig or a hundred, we treat every job like our reputation depends on it — because it does.
+              Georgia Truck Care is Atlanta's go-to shop for serious truck and diesel pickup work. Whether you run one rig or a hundred, we treat every job like our reputation depends on it — because it does.
             </p>
             <ul className="mt-8 space-y-3">
               {[
@@ -106,7 +106,7 @@ function Index() {
             <div className="relative aspect-square bg-[#0A0A0A] border border-[var(--border)] overflow-hidden">
               <img
                 src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1200&q=80"
-                alt="Semi truck in repair shop"
+                alt="Truck and diesel pickup in repair shop"
                 className="w-full h-full object-cover"
                 loading="lazy"
               />

@@ -7,7 +7,7 @@ export const Route = createFileRoute("/reviews")({
   head: () => ({
     meta: [
       { title: "Reviews — Georgia Truck Care" },
-      { name: "description", content: "5.0★ rated truck and trailer repair shop in Atlanta. Read reviews from drivers and fleets we've served." },
+      { name: "description", content: "5.0★ rated truck and diesel pickup repair shop in Atlanta. Read reviews from drivers and fleets we've served." },
       { property: "og:title", content: "Reviews — Georgia Truck Care" },
       { property: "og:description", content: "5.0★ on Google. Real reviews from real drivers." },
       { property: "og:url", content: "/reviews" },
@@ -21,7 +21,7 @@ const reviews = [
   { name: "Marcus T.", city: "Atlanta, GA", text: "Best truck shop in the metro. Diagnosed my engine issue in an hour and had me rolling the next morning. Honest pricing, real expertise." },
   { name: "Dwayne R.", city: "Marietta, GA", text: "Run a small fleet of 12 trucks. These guys handle all our PMs and any breakdowns. Communication is fast, work is solid, prices are fair." },
   { name: "Sasha L.", city: "Decatur, GA", text: "Got stranded on I-285 with brake issues. They sent mobile help within 40 minutes. Saved my whole load. Forever customer." },
-  { name: "Robert K.", city: "Sandy Springs, GA", text: "Trailer wiring nightmare nobody else could fix. Georgia Truck Care had it sorted in under 3 hours. These guys know their stuff." },
+  { name: "Robert K.", city: "Sandy Springs, GA", text: "Diesel pickup wiring nightmare nobody else could fix. Georgia Truck Care had it sorted in under 3 hours. These guys know their stuff." },
   { name: "Jamal P.", city: "Atlanta, GA", text: "Owner-operator here. They treat my one truck the same as a 50-rig fleet. Real respect for what we do out here." },
   { name: "Tina M.", city: "Smyrna, GA", text: "Quoted me half what the dealership wanted for a brake job. Same OEM parts, faster turnaround. Couldn't believe it." },
   { name: "Andre S.", city: "Norcross, GA", text: "PM service done while I waited. Clean shop, real techs, no upsell games. This is how it should be." },

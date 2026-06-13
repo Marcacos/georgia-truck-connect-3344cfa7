@@ -10,7 +10,7 @@ export function Footer() {
           <div className="space-y-5">
             <Logo />
             <p className="text-sm text-[#A0A0A0] max-w-xs">
-              Expert Service. Zero Shortcuts. Truck &amp; trailer maintenance and repair you can trust.
+              Expert Service. Zero Shortcuts. Truck &amp; diesel pickup maintenance and repair you can trust.
             </p>
             <div className="flex items-center gap-3">
               {[

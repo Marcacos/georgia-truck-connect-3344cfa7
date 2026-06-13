@@ -8,7 +8,7 @@ export const Route = createFileRoute("/faq")({
   head: () => ({
     meta: [
       { title: "FAQ — Georgia Truck Care" },
-      { name: "description", content: "Common questions about our truck and trailer repair services in Atlanta, GA." },
+      { name: "description", content: "Common questions about our truck and diesel pickup repair services in Atlanta, GA." },
       { property: "og:title", content: "FAQ — Georgia Truck Care" },
       { property: "og:description", content: "Hours, services, roadside, booking — answered." },
       { property: "og:url", content: "/faq" },
@@ -31,7 +31,7 @@ export const Route = createFileRoute("/faq")({
 });
 
 const faqs = [
-  { q: "Do you work with semi-trucks and trailers?", a: "Yes. We service all classes of semi-trucks (Class 7 & 8), box trucks, day cabs, sleepers, and every kind of trailer — reefer, dry van, flatbed, dump, and more." },
+  { q: "Do you work with semi-trucks and diesel pickups?", a: "Yes. We service all classes of semi-trucks (Class 7 & 8), box trucks, day cabs, sleepers, and diesel pickups — Ford Super Duty (Power Stroke), Ram HD (Cummins), and Chevy/GMC HD (Duramax)." },
   { q: "Do you serve fleet companies?", a: "Absolutely. We have dedicated fleet maintenance programs with priority scheduling, fleet pricing, and consolidated billing. Whether you run 3 trucks or 300, we'll build a plan that fits." },
   { q: "What are your hours?", a: "Monday through Friday 6am–6pm and Saturday 7am–3pm. We're closed Sunday. Roadside assistance is available during business hours across metro Atlanta." },
   { q: "Do you offer roadside assistance?", a: "Yes. Our mobile service unit handles breakdowns across the Atlanta metro — flat tires, jump starts, air leaks, brake adjustments, and basic emergency repairs to get you rolling again." },
