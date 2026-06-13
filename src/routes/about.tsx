@@ -7,9 +7,9 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About — Georgia Truck Care" },
-      { name: "description", content: "Atlanta-based truck and trailer repair shop serving fleets and independents. Learn about our mission, values, and team." },
+      { name: "description", content: "Atlanta-based truck and diesel pickup repair shop serving fleets and independents. Learn about our mission, values, and team." },
       { property: "og:title", content: "About — Georgia Truck Care" },
-      { property: "og:description", content: "Atlanta's trusted truck and trailer shop. Expert service. Zero shortcuts." },
+      { property: "og:description", content: "Atlanta's trusted truck and diesel pickup shop. Expert service. Zero shortcuts." },
       { property: "og:url", content: "/about" },
     ],
     links: [{ rel: "canonical", href: "/about" }],
@@ -46,7 +46,7 @@ function AboutPage() {
                 Georgia Truck Care was founded by drivers who got tired of shops that overpromised and underdelivered. We opened our doors in Atlanta with one rule: do the work right, the first time.
               </p>
               <p>
-                Today we service hundreds of trucks and trailers a year — from solo owner-operators running coast-to-coast to local fleets keeping Atlanta moving. The promise is still the same.
+                Today we service hundreds of trucks and diesel pickups a year — from solo owner-operators running coast-to-coast to local fleets keeping Atlanta moving. The promise is still the same.
               </p>
             </div>
           </Reveal>
@@ -68,7 +68,7 @@ function AboutPage() {
             <div className="border-l-4 border-[var(--gold)] pl-8">
               <span className="section-label mb-6">Our Mission</span>
               <blockquote className="font-display italic text-2xl lg:text-4xl leading-snug text-white">
-                "To be the most trusted truck and trailer shop in Georgia — where every driver, fleet, and owner-operator knows the work will be done right, on time, every time."
+                "To be the most trusted truck and diesel pickup shop in Georgia — where every driver, fleet, and owner-operator knows the work will be done right, on time, every time."
               </blockquote>
             </div>
           </Reveal>

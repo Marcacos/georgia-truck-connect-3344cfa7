@@ -77,7 +77,7 @@ export const services: Service[] = [
     icon: Droplet,
     image: oilBrakesImg,
     description:
-      "Keep your truck safe and on schedule. Full-synthetic oil services, filters, and complete brake service for tractors and trailers.",
+      "Keep your truck safe and on schedule. Full-synthetic oil services, filters, and complete brake service for trucks and diesel pickups.",
     includes: [
       "Full-service oil and filter changes",
       "Air brake chamber replacement",
@@ -107,12 +107,12 @@ export const services: Service[] = [
     icon: Flame,
     image: weldingImg,
     description:
-      "Structural and cosmetic welding for chassis, frames, brackets, and trailers — done by certified welders across all common materials.",
+      "Structural and cosmetic welding for chassis, frames, brackets, and beds — done by certified welders across all common materials.",
     includes: [
       "Steel, aluminum, and stainless",
       "Frame and chassis repair",
       "Bracket and mount fabrication",
-      "Trailer floor and structural welding",
+      "Bed and structural welding",
     ],
   },
 ];
