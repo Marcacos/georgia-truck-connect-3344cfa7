@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Check, Star, Truck, MapPin, Award } from "lucide-react";
+import { ArrowRight, Check, Star, Truck, MapPin } from "lucide-react";
 import { SiteLayout } from "../components/SiteLayout";
 import { Reveal } from "../components/Reveal";
 import { services } from "../lib/services";
