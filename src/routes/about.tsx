@@ -1,5 +1,5 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { Shield, Clock, Users, Wrench } from "lucide-react";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { ArrowRight, Shield, Clock, Users, Wrench } from "lucide-react";
 import { PageHero, SiteLayout } from "../components/SiteLayout";
 import { Reveal } from "../components/Reveal";
 
