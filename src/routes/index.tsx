@@ -177,11 +177,6 @@ function Index() {
         </div>
       </section>
 
-      {/* TESTIMONIALS */}
-      <section className="bg-[#0A0A0A]">
-        <div className="mx-auto max-w-7xl px-5 lg:px-8 py-24 lg:py-32">
-          <Reveal>
-            <span className="section-label mb-6">Client Reviews</span>
       {/* GALLERY / WORK */}
       <section className="bg-[#0A0A0A] border-t border-[var(--border)]">
         <div className="mx-auto max-w-7xl px-5 lg:px-8 py-24 lg:py-32">
