@@ -33,7 +33,7 @@ export function Nav() {
         scrolled ? "bg-[#0A0A0A]/90 backdrop-blur-md border-b border-[var(--border)]" : "bg-transparent"
       }`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3 lg:px-8">
         <Logo />
 
         <nav className="hidden lg:flex items-center gap-1">
