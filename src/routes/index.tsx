@@ -111,8 +111,8 @@ function Index() {
           <Reveal delay={120}>
             <div className="relative aspect-square bg-[#0A0A0A] border border-[var(--border)] overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1200&q=80"
-                alt="Truck and diesel pickup in repair shop"
+                src={weldingImg.url}
+                alt="Georgia Truck Care technician welding a truck frame"
                 className="w-full h-full object-cover"
                 loading="lazy"
               />
