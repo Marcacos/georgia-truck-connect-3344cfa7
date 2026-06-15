@@ -182,6 +182,39 @@ function Index() {
         <div className="mx-auto max-w-7xl px-5 lg:px-8 py-24 lg:py-32">
           <Reveal>
             <span className="section-label mb-6">Client Reviews</span>
+      {/* GALLERY / WORK */}
+      <section className="bg-[#0A0A0A] border-t border-[var(--border)]">
+        <div className="mx-auto max-w-7xl px-5 lg:px-8 py-24 lg:py-32">
+          <Reveal>
+            <span className="section-label mb-6">Our Work</span>
+            <h2 className="font-display font-bold uppercase text-3xl sm:text-4xl lg:text-5xl max-w-3xl">
+              Real Trucks. <span className="text-[var(--gold)]">Real Repairs.</span>
+            </h2>
+          </Reveal>
+          <div className="mt-16 grid grid-cols-2 lg:grid-cols-3 gap-px bg-[var(--border)] border border-[var(--border)]">
+            {[
+              { src: ramImg.url, alt: "Ram diesel pickup on lift for service" },
+              { src: fleetImg.url, alt: "Amazon delivery truck fleet serviced by Georgia Truck Care" },
+              { src: rvImg.url, alt: "Class A motorhome on the shop lift" },
+              { src: diagnosticImg.url, alt: "Technician running diesel diagnostics on a box truck" },
+              { src: trailerImg.url, alt: "Trailer roof repair on a scissor lift" },
+              { src: weldingImg.url, alt: "Welding work on a custom truck chassis" },
+            ].map((img, i) => (
+              <Reveal key={img.src} delay={i * 60}>
+                <div className="relative aspect-square overflow-hidden bg-[#141414] group">
+                  <img src={img.src} alt={img.alt} loading="lazy" className="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition duration-500" />
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* TESTIMONIALS */}
+      <section className="bg-[#0A0A0A] border-t border-[var(--border)]">
+        <div className="mx-auto max-w-7xl px-5 lg:px-8 py-24 lg:py-32">
+          <Reveal>
+            <span className="section-label mb-6">Client Reviews</span>
             <h2 className="font-display font-bold uppercase text-3xl sm:text-4xl lg:text-5xl max-w-3xl">
               Trusted by Drivers <span className="text-[var(--gold)]">Across Georgia.</span>
             </h2>
