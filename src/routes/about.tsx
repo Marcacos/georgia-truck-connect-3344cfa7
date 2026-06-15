@@ -33,30 +33,33 @@ function AboutPage() {
         subtitle="Atlanta-based. Driver-trusted. Built on the belief that heavy-duty work deserves heavy-duty care."
       />
 
-      {/* Story */}
+      {/* About Us - Referência */}
       <section className="bg-[#0A0A0A]">
-        <div className="mx-auto max-w-7xl px-5 lg:px-8 py-24 grid lg:grid-cols-2 gap-16 items-center">
+        <div className="mx-auto max-w-3xl px-5 lg:px-8 py-24 text-center">
           <Reveal>
-            <span className="section-label mb-6">Our Story</span>
-            <h2 className="font-display font-bold uppercase text-3xl lg:text-4xl">
-              Started With <span className="text-[var(--gold)]">One Truck</span> and One Promise.
+            <span className="section-label mb-6 inline-block">About Us</span>
+            <h2 className="font-display font-bold uppercase text-3xl sm:text-4xl lg:text-5xl leading-tight">
+              EXCELLENCE IN <span className="text-[var(--gold)]">TRUCK & DIESEL</span> REPAIR
             </h2>
-            <div className="mt-6 space-y-5 text-[#A0A0A0] text-lg leading-relaxed">
-              <p>
-                Georgia Truck Care was founded by drivers who got tired of shops that overpromised and underdelivered. We opened our doors in Atlanta with one rule: do the work right, the first time.
-              </p>
-              <p>
-                Today we service hundreds of trucks and diesel pickups a year — from solo owner-operators running coast-to-coast to local fleets keeping Atlanta moving. The promise is still the same.
-              </p>
-            </div>
-          </Reveal>
-          <Reveal delay={120}>
-            <div className="relative aspect-square bg-[#141414] border border-[var(--border)] overflow-hidden">
-              <div className="absolute inset-0 flex items-center justify-center opacity-[0.08]">
-                <span className="font-display font-black text-[14rem] text-[var(--gold)]">GTC</span>
-              </div>
-              <div className="absolute inset-0 [background-image:repeating-linear-gradient(45deg,rgba(255,255,255,0.02)_0_1px,transparent_1px_24px)]" />
-            </div>
+            <p className="mt-8 text-[#A0A0A0] text-lg leading-relaxed">
+              Georgia Truck Care is Atlanta's premier destination for heavy-duty truck and diesel pickup service. Our expert craftsmanship ensures long-lasting and reliable results for fleets and independents across Georgia.
+            </p>
+            <ul className="mt-10 space-y-5 text-left max-w-xl mx-auto">
+              {[
+                "Expert certified technicians trained on all major diesel platforms.",
+                "Our superior repair techniques guarantee durability and long-term performance in every job.",
+                "We offer personalized service plans that match your fleet's schedule and operational requirements.",
+                "Our team provides exceptional customer support, guiding you from diagnosis to delivery.",
+              ].map((t) => (
+                <li key={t} className="flex items-start gap-4 text-white">
+                  <span className="mt-2 inline-flex h-3 w-3 shrink-0 rounded-full bg-[var(--gold)]" />
+                  <span className="text-[#A0A0A0]">{t}</span>
+                </li>
+              ))}
+            </ul>
+            <Link to="/services" className="mt-10 inline-flex items-center gap-2 rounded-md bg-[var(--gold)] px-8 py-4 text-sm font-bold uppercase tracking-[0.08em] text-[#0A0A0A] transition-colors hover:bg-[var(--gold-hover)]">
+              Read More <ArrowRight className="h-4 w-4" />
+            </Link>
           </Reveal>
         </div>
       </section>
