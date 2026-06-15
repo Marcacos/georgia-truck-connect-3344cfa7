@@ -3,6 +3,12 @@ import { ArrowRight, Check, Star, Truck, MapPin } from "lucide-react";
 import { SiteLayout } from "../components/SiteLayout";
 import { Reveal } from "../components/Reveal";
 import { services } from "../lib/services";
+import weldingImg from "../assets/gallery/welding.jpg.asset.json";
+import diagnosticImg from "../assets/gallery/diagnostic.jpg.asset.json";
+import fleetImg from "../assets/gallery/fleet.jpg.asset.json";
+import rvImg from "../assets/gallery/rv.jpg.asset.json";
+import trailerImg from "../assets/gallery/trailer.jpg.asset.json";
+import ramImg from "../assets/gallery/ram.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
