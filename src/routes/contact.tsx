@@ -20,7 +20,7 @@ export const Route = createFileRoute("/contact")({
 
 // Formspree endpoint — replace with your actual form ID from https://formspree.io
 // 1. Go to https://formspree.io and create a free account
-// 2. Create a new form and set the recipient to: georgiacustomgates@gmail.com
+// 2. Create a new form and set the recipient to: georgiatruckcare87@gmail.com
 // 3. Copy the endpoint URL (looks like: https://formspree.io/f/XXXXXXXX)
 // 4. Paste it below, replacing "YOUR_FORM_ID"
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/mvznljgv";
@@ -137,7 +137,7 @@ function ContactPage() {
                 <span className="section-label mb-4">Contact Info</span>
                 <ul className="mt-6 space-y-5">
                   <InfoRow Icon={Phone} label="Phone" value="(617) 767-3926" href="tel:+16177673926" />
-                  <InfoRow Icon={Mail} label="Email" value="georgiacustomgates@gmail.com" href="mailto:georgiacustomgates@gmail.com" />
+                  <InfoRow Icon={Mail} label="Email" value="georgiatruckcare87@gmail.com" href="mailto:georgiatruckcare87@gmail.com" />
                   <InfoRow Icon={MapPin} label="Address" value="3385 Donald Lee Hollowell Pkwy NW, Atlanta, GA 30331" />
                 </ul>
               </div>
