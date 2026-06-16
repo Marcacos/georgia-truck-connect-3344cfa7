@@ -23,24 +23,24 @@ export function Nav() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-useEffect(() => {
-  if (open) {
-    document.body.style.overflow = "hidden";
-    document.body.style.position = "fixed";
-    document.body.style.width = "100%";
-  } else {
-    document.body.style.overflow = "";
-    document.body.style.position = "";
-    document.body.style.width = "";
-  }
-}, [open]);
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden";
+      document.body.style.position = "fixed";
+      document.body.style.width = "100%";
+    } else {
+      document.body.style.overflow = "";
+      document.body.style.position = "";
+      document.body.style.width = "";
+    }
+  }, [open]);
 
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-200 ${
         scrolled || open
           ? "bg-[#0A0A0A]/90 backdrop-blur-md border-b border-[var(--border)]"
-          : "bg-transparent"
+          : "bg-[#0A0A0A]/90"
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3 lg:px-8">
