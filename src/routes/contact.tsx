@@ -18,9 +18,12 @@ export const Route = createFileRoute("/contact")({
   component: ContactPage,
 });
 
-// TODO: Replace with the actual Formspree endpoint for georgiacustomgates@gmail.com.
-// Get one at https://formspree.io — the form below already posts the right fields.
-const FORMSPREE_ENDPOINT = "https://formspree.io/f/your-form-id";
+// Formspree endpoint — replace with your actual form ID from https://formspree.io
+// 1. Go to https://formspree.io and create a free account
+// 2. Create a new form and set the recipient to: georgiacustomgates@gmail.com
+// 3. Copy the endpoint URL (looks like: https://formspree.io/f/XXXXXXXX)
+// 4. Paste it below, replacing "YOUR_FORM_ID"
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
