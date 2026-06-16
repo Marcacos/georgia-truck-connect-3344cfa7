@@ -48,7 +48,6 @@ function AboutPage() {
               {[
                 "Expert certified technicians trained on all major diesel platforms.",
                 "Our superior repair techniques guarantee durability and long-term performance in every job.",
-                "We offer personalized service plans that match your fleet's schedule and operational requirements.",
                 "Our team provides exceptional customer support, guiding you from diagnosis to delivery.",
               ].map((t) => (
                 <li key={t} className="flex items-start gap-4 text-white">
