@@ -35,7 +35,7 @@ const faqs = [
   { q: "Do you serve fleet companies?", a: "Absolutely. We have dedicated fleet maintenance programs with priority scheduling, fleet pricing, and consolidated billing. Whether you run 3 trucks or 300, we'll build a plan that fits." },
   { q: "What are your hours?", a: "Monday through Friday 6am–6pm and Saturday 7am–3pm. We're closed Sunday. Roadside assistance is available during business hours across metro Atlanta." },
   { q: "Do you offer roadside assistance?", a: "Yes. Our mobile service unit handles breakdowns across the Atlanta metro — flat tires, jump starts, air leaks, brake adjustments, and basic emergency repairs to get you rolling again." },
-  { q: "How do I book a service?", a: "Call us at (617) 767-3926, email georgiacustomgates@gmail.com, or use the contact form on our website. We'll confirm your appointment and give you an honest ETA." },
+  { q: "How do I book a service?", a: "Call us at (617) 767-3926, email georgiatruckcare87@gmail.com, or use the contact form on our website. We'll confirm your appointment and give you an honest ETA." },
 ];
 
 function FaqPage() {
