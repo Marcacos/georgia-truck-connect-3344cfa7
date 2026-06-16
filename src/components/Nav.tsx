@@ -82,11 +82,13 @@ export function Nav() {
       </div>
 
       {/* Mobile overlay */}
-      <div
-        className={`fixed inset-0 z-[60] bg-[#0A0A0A] transition-opacity duration-200 lg:hidden ${
-open ? "opacity-100 pointer-events-auto" : "opacity-100 pointer-events-none"
-        }`}
-      >
+<div
+  className={`fixed inset-0 z-[9999] bg-[#0A0A0A] ${
+    open
+      ? "opacity-100 pointer-events-auto"
+      : "opacity-0 pointer-events-none"
+  }`}
+>
         <div className="flex items-center justify-between px-5 py-4 border-b border-[var(--border)]">
           <Logo />
           <button
