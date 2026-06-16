@@ -36,59 +36,61 @@ export function Nav() {
   }, [open]);
 
   return (
-<header
-  className={`fixed inset-x-0 top-0 z-50 transition-all duration-200 ${
-    open
-      ? "bg-[#0A0A0A]"
-      : scrolled
-      ? "bg-[#0A0A0A]/90 backdrop-blur-md border-b border-[var(--border)]"
-      : "bg-[#0A0A0A]/90"
-  }`}
->
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3 lg:px-8">
-        <Logo />
+    <>
+      <header
+        className={`fixed inset-x-0 top-0 z-50 transition-all duration-200 ${
+          open
+            ? "bg-[#0A0A0A]"
+            : scrolled
+            ? "bg-[#0A0A0A]/90 backdrop-blur-md border-b border-[var(--border)]"
+            : "bg-[#0A0A0A]/90"
+        }`}
+      >
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3 lg:px-8">
+          <Logo />
 
-        <nav className="hidden lg:flex items-center gap-1">
-          {links.map((l) => (
+          <nav className="hidden lg:flex items-center gap-1">
+            {links.map((l) => (
+              <Link
+                key={l.to}
+                to={l.to}
+                activeOptions={{ exact: l.to === "/" }}
+                activeProps={{ className: "text-[var(--gold)]" }}
+                inactiveProps={{ className: "text-white/70 hover:text-white" }}
+                className="px-4 py-2 text-sm font-medium tracking-wide transition-colors"
+              >
+                {l.label}
+              </Link>
+            ))}
+          </nav>
+
+          <div className="hidden lg:block">
             <Link
-              key={l.to}
-              to={l.to}
-              activeOptions={{ exact: l.to === "/" }}
-              activeProps={{ className: "text-[var(--gold)]" }}
-              inactiveProps={{ className: "text-white/70 hover:text-white" }}
-              className="px-4 py-2 text-sm font-medium tracking-wide transition-colors"
+              to="/contact"
+              className="inline-flex items-center gap-2 rounded-md bg-[var(--gold)] px-5 py-2.5 text-sm font-bold uppercase tracking-[0.08em] text-[#0A0A0A] transition-colors hover:bg-[var(--gold-hover)]"
             >
-              {l.label}
+              Book a Service
             </Link>
-          ))}
-        </nav>
+          </div>
 
-        <div className="hidden lg:block">
-          <Link
-            to="/contact"
-            className="inline-flex items-center gap-2 rounded-md bg-[var(--gold)] px-5 py-2.5 text-sm font-bold uppercase tracking-[0.08em] text-[#0A0A0A] transition-colors hover:bg-[var(--gold-hover)]"
+          <button
+            aria-label="Open menu"
+            className="lg:hidden inline-flex h-10 w-10 items-center justify-center rounded-md border border-[var(--border)] text-white"
+            onClick={() => setOpen(true)}
           >
-            Book a Service
-          </Link>
+            <Menu className="h-5 w-5" />
+          </button>
         </div>
+      </header>
 
-        <button
-          aria-label="Open menu"
-          className="lg:hidden inline-flex h-10 w-10 items-center justify-center rounded-md border border-[var(--border)] text-white"
-          onClick={() => setOpen(true)}
-        >
-          <Menu className="h-5 w-5" />
-        </button>
-      </div>
-
-      {/* Mobile overlay */}
-<div
-  className={`fixed inset-0 z-[9999] bg-[#0A0A0A] ${
-    open
-      ? "opacity-100 pointer-events-auto"
-      : "opacity-0 pointer-events-none"
-  }`}
->
+      {/* Mobile overlay - rendered outside header to avoid backdrop-filter stacking context */}
+      <div
+        className={`fixed inset-0 z-[9999] bg-[#0A0A0A] ${
+          open
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
+        }`}
+      >
         <div className="flex items-center justify-between px-5 py-4 border-b border-[var(--border)]">
           <Logo />
           <button
@@ -128,6 +130,7 @@ export function Nav() {
           </a>
         </nav>
       </div>
-    </header>
+    </>
+
   );
 }
