@@ -145,8 +145,8 @@ function ContactPage() {
               <div className="bg-[#141414] border border-[var(--border)] p-7 lg:p-10">
                 <span className="section-label mb-4">Business Hours</span>
                 <ul className="mt-6 space-y-3 text-sm">
-                  <Hours day="Monday – Friday" time="6:00 AM – 6:00 PM" />
-                  <Hours day="Saturday" time="7:00 AM – 3:00 PM" />
+                  <Hours day="Monday – Friday" time="7:30 AM – 5:00 PM" />
+                  <Hours day="Saturday" time="7:30 AM – 12:00 PM" />
                   <Hours day="Sunday" time="Closed" muted />
                 </ul>
                 <div className="mt-6 flex items-center gap-2 text-xs text-[#A0A0A0]">
