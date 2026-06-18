@@ -110,11 +110,11 @@ function Index() {
             </Link>
           </Reveal>
           <Reveal delay={120}>
-            <div className="relative aspect-square bg-[#0A0A0A] border border-[var(--border)] overflow-hidden">
+            <div className="relative aspect-square bg-[#0A0A0A] border border-[var(--border)] overflow-hidden p-8 lg:p-12 flex items-center justify-center">
               <img
-                src={weldingImg.url}
-                alt="Georgia Truck Care technician welding a truck frame"
-                className="w-full h-full object-cover"
+                src={logoImg.url}
+                alt="Georgia Truck Care logo"
+                className="w-full h-full object-contain"
                 loading="lazy"
               />
             </div>
