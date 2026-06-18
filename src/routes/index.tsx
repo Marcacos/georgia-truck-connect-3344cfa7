@@ -9,6 +9,7 @@ import fleetImg from "../assets/gallery/fleet.jpg.asset.json";
 import rvImg from "../assets/gallery/rv.jpg.asset.json";
 import trailerImg from "../assets/gallery/trailer.jpg.asset.json";
 import ramImg from "../assets/gallery/ram.jpg.asset.json";
+import logoImg from "../assets/georgia-logo.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -109,11 +110,11 @@ function Index() {
             </Link>
           </Reveal>
           <Reveal delay={120}>
-            <div className="relative aspect-square bg-[#0A0A0A] border border-[var(--border)] overflow-hidden">
+            <div className="relative aspect-square bg-[#0A0A0A] border border-[var(--border)] overflow-hidden p-8 lg:p-12 flex items-center justify-center">
               <img
-                src={weldingImg.url}
-                alt="Georgia Truck Care technician welding a truck frame"
-                className="w-full h-full object-cover"
+                src={logoImg.url}
+                alt="Georgia Truck Care logo"
+                className="w-full h-full object-contain"
                 loading="lazy"
               />
             </div>
