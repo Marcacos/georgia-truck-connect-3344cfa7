@@ -167,6 +167,7 @@ function Index() {
               { value: "8+", label: "Years Of Experience" },
               { value: "500+", label: "Trucks Serviced" },
               { value: "5.0★", label: "Google Rating" },
+              { value: "GA", label: "StateWide Service" },
             ].map((m) => (
               <div key={m.label} className="bg-[#141414] p-8 lg:p-10 text-center">
                 <div className="font-display font-bold text-4xl lg:text-5xl text-[var(--gold)]">{m.value}</div>
