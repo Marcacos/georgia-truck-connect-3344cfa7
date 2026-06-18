@@ -9,6 +9,7 @@ import fleetImg from "../assets/gallery/fleet.jpg.asset.json";
 import rvImg from "../assets/gallery/rv.jpg.asset.json";
 import trailerImg from "../assets/gallery/trailer.jpg.asset.json";
 import ramImg from "../assets/gallery/ram.jpg.asset.json";
+import logoImg from "../assets/georgia-logo.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
