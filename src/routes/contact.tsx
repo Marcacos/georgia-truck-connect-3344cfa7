@@ -23,7 +23,7 @@ export const Route = createFileRoute("/contact")({
 // 2. Create a new form and set the recipient to: georgiatruckcare87@gmail.com
 // 3. Copy the endpoint URL (looks like: https://formspree.io/f/XXXXXXXX)
 // 4. Paste it below, replacing "YOUR_FORM_ID"
-const FORMSPREE_ENDPOINT = "https://formspree.io/f/mvznljgv";
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/mzdlzqop";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
