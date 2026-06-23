@@ -9,7 +9,7 @@ import fleetImg from "../assets/gallery/fleet.jpg";
 import rvImg from "../assets/gallery/rv.jpg";
 import trailerImg from "../assets/gallery/trailer.jpg";
 import ramImg from "../assets/gallery/ram.jpg";
-import logoImg from "../assets/georgia-logo.png.asset.json"; // TODO: trocar para o .png real quando disponível
+import logoImg from "../assets/georgia-logo.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -112,7 +112,7 @@ function Index() {
           <Reveal delay={120}>
             <div className="relative aspect-square bg-[#0A0A0A] border border-[var(--border)] overflow-hidden p-8 lg:p-12 flex items-center justify-center">
               <img
-                src={logoImg.url}
+                src={logoImg}
                 alt="Georgia Truck Care logo"
                 className="w-full h-full object-contain"
                 loading="lazy"
