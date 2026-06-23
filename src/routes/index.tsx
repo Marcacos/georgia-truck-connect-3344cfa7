@@ -3,13 +3,13 @@ import { ArrowRight, Check, Star, Truck, MapPin } from "lucide-react";
 import { SiteLayout } from "../components/SiteLayout";
 import { Reveal } from "../components/Reveal";
 import { services } from "../lib/services";
-import weldingImg from "../assets/gallery/welding.jpg.asset.json";
-import diagnosticImg from "../assets/gallery/diagnostic.jpg.asset.json";
-import fleetImg from "../assets/gallery/fleet.jpg.asset.json";
-import rvImg from "../assets/gallery/rv.jpg.asset.json";
-import trailerImg from "../assets/gallery/trailer.jpg.asset.json";
-import ramImg from "../assets/gallery/ram.jpg.asset.json";
-import logoImg from "../assets/georgia-logo.png.asset.json";
+import weldingImg from "../assets/gallery/welding.jpg";
+import diagnosticImg from "../assets/gallery/diagnostic.jpg";
+import fleetImg from "../assets/gallery/fleet.jpg";
+import rvImg from "../assets/gallery/rv.jpg";
+import trailerImg from "../assets/gallery/trailer.jpg";
+import ramImg from "../assets/gallery/ram.jpg";
+import logoImg from "../assets/georgia-logo.png.asset.json"; // TODO: trocar para o .png real quando disponível
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -189,12 +189,12 @@ function Index() {
           </Reveal>
           <div className="mt-16 grid grid-cols-2 lg:grid-cols-3 gap-px bg-[var(--border)] border border-[var(--border)]">
             {[
-              { src: ramImg.url, alt: "Ram diesel pickup on lift for service" },
-              { src: fleetImg.url, alt: "Amazon delivery truck fleet serviced by Georgia Truck Care" },
-              { src: rvImg.url, alt: "Class A motorhome on the shop lift" },
-              { src: diagnosticImg.url, alt: "Technician running diesel diagnostics on a box truck" },
-              { src: trailerImg.url, alt: "Trailer roof repair on a scissor lift" },
-              { src: weldingImg.url, alt: "Welding work on a custom truck chassis" },
+              { src: ramImg, alt: "Ram diesel pickup on lift for service" },
+              { src: fleetImg, alt: "Amazon delivery truck fleet serviced by Georgia Truck Care" },
+              { src: rvImg, alt: "Class A motorhome on the shop lift" },
+              { src: diagnosticImg, alt: "Technician running diesel diagnostics on a box truck" },
+              { src: trailerImg, alt: "Trailer roof repair on a scissor lift" },
+              { src: weldingImg, alt: "Welding work on a custom truck chassis" },
             ].map((img, i) => (
               <Reveal key={img.src} delay={i * 60}>
                 <div className="relative aspect-square overflow-hidden bg-[#141414] group">
