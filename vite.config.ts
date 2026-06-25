@@ -12,9 +12,8 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
-  // Override the default Cloudflare target so builds run on a plain Node host (e.g. Render).
-  // Only takes effect outside the Lovable build environment.
+  // Target Vercel's serverless platform.
   nitro: {
-    preset: "node-server",
+    preset: "vercel",
   },
 });
